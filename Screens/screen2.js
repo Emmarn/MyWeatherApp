@@ -1,18 +1,13 @@
 import { View, ImageBackground, StatusBar, Text, TextInput, StyleSheet, Dimensions } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { withNavigation } from 'react-navigation';
-
+import Mainscreen from './Mainscreen';
+import Weatherinfo from "../Components/weatherInfo";
 
 
 const Screen2 = () => {
 
     return (
         <View style={styles.screen2}>
-            <ImageBackground
-                source={require('../assets/blomma.jpg')}
-                reziseMode='cover'
-                style={styles.imgback2}/>
+            <Weatherinfo/>
         </View>
     )
 
