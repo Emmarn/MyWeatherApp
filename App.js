@@ -1,32 +1,30 @@
 import axios from "axios";
 import React, {useState, useCallback }  from "react";
-import { Text, FlatList, Pressable, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator } from 'react-native'
-import Mainscreen from "./Screens/Mainscreen";
-import Screen2 from "./Screens/screen2";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { withNavigation } from 'react-navigation';
-import Cityweather from "./Components/Cityweather";
-import Weatherinfo from "./Components/weatherInfo";
+import Mainscreen from "./Screens/Mainscreen";
+import Screen2 from "./Screens/Screen2";
 
+
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
-  const NativeStack = createNativeStackNavigator()
 
   return (
     <NavigationContainer>
-    <NativeStack.Navigator>
-      <NativeStack.Screen
-        options={{ headerShown: false }}
-        name='MainScreen'
-        component={Cityweather}
+    <Stack.Navigator>
+    <Stack.Screen
+        name='Mainscreen'
+        component={Mainscreen}
+        options={{title: "Home"}}
       />
-      <NativeStack.Screen
+       <Stack.Screen
         name='Screen2'
-        component={Weatherinfo}
+        component={Screen2}
+        options={{title: "Uv värde"}}
       />
-    </NativeStack.Navigator>
+    </Stack.Navigator>
   </NavigationContainer>
 
   )

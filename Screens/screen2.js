@@ -1,16 +1,19 @@
-import { View, ImageBackground, StatusBar, Text, TextInput, StyleSheet, Dimensions } from "react-native";
-import Mainscreen from './Mainscreen';
-import Weatherinfo from "../Components/weatherInfo";
+import { View, Text, Pressable } from "react-native";
+import SolarInfo from "../Components/SolarInfo";
 
 
-const Screen2 = () => {
+
+const Screen2 = ({navigation:{ goBack}}) => {
 
     return (
-        <View style={styles.screen2}>
-            <Weatherinfo/>
-        </View>
+        <>
+            <SolarInfo/>
+            <Pressable
+                onPress={() => goBack()}>
+                <Text>Tillbaka</Text>
+                </Pressable>
+        </>
     )
-
 }
 
 export default Screen2;

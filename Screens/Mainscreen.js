@@ -1,18 +1,27 @@
 import axios from "axios";
 import React, {useState, useCallback }  from "react";
-import { Text, FlatList, Pressable, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator} from 'react-native'
+import { Text, Pressable, StyleSheet, View} from 'react-native'
+import Cityweather from "../Components/Cityweather";
 
 
-const Mainscreen = ({navigation}) => {
-    
+const Mainscreen = ({navigation: {navigate}}) => {
+
+
    return (
-     <View>
-      <Cityweather/>
-     </View>
-
+     <>
+    <Cityweather/>
+    <Pressable 
+     onPress={() => navigate("Screen2")}>
+      <Text style={styles.pressbtn}>Se UV värde</Text>
+       </Pressable>
+     </>
    )
    }
-  
+   const styles = StyleSheet.create({
+    pressbtn:{
+      fontSize: 20
+    }
+  });
 
   export default Mainscreen;
 
