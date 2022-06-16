@@ -109,7 +109,12 @@ const Cityweather = () => {
       fontSize: 22,
       color: "#fff",
       marginVertical: 10,
-      fontWeight: '500'
+      fontWeight: '500',
+     },
+     pressbtn:{
+     color: "#fff",
+     fontSize: 22,
+     paddingLeft: 130,
      }
     
   });
