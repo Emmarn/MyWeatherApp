@@ -52,9 +52,9 @@ const Cityweather = () => {
           {data && (
             <View style={styles.infoView}>
               <Text
-                style={styles.cityCountryText}>
+                style={styles.cityCountryTexts}>
                 {`${data?.name}, ${data?.sys?.country}`}</Text>
-              <Text style={styles.dateText}>{new Date().toLocaleString()}</Text>
+                <Text style={styles.dateText}>{new Date().toLocaleString()}</Text>
               <Text style={styles.tempText}>{`${Math.round(
                 data?.main?.temp,
               )} °C`}</Text>
@@ -89,7 +89,7 @@ const Cityweather = () => {
     infoView:{
      alignItems: 'center',
     },
-    cityCountryText:{
+    cityCountryTexts:{
      color: "#fff",
      fontSize: 40,
      fontWeight: 'bold',

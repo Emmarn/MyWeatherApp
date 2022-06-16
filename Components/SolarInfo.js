@@ -20,7 +20,7 @@ const Solarinfo = () => {
       setInput("");
       axios({
         method:"GET",
-        url:`api.openweathermap.org/data/2.5/forecast/daily?lat=${input}&cnt=10&appid=${api.key}`,
+        url:`https://api.openweathermap.org/data/2.5/forecast?q=${input}&lang=sv&units=metric&appid=${api.key}`
       }).then(res => {
         console.log(res.data);
         setData(res.data);
@@ -53,11 +53,10 @@ return (
             <View style={styles.infoView}>
               <Text
                 style={styles.cityCountryText}>
-                {`${data?.name}, ${data?.sys?.country}`}</Text>
-              <Text style={styles.dateText}>{new Date().toLocaleString()}</Text>
-              <Text style={styles.tempText}>{`${Math.round(
-                data?.main?.temp,
-              )} °C`}</Text>
+                {`${data?.city?.name}, ${data?.city?.country}`}</Text>
+                 <Text style={styles.tempText}>
+                 {`${data?.city?.population}`}
+                </Text>
             </View>
           )}
     </ImageBackground>

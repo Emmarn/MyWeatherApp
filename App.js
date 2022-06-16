@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import React, {useState, useCallback }  from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { Text, Pressable, StyleSheet, View} from 'react-native'
@@ -18,12 +18,12 @@ export default function App() {
     <Stack.Screen
         name='Mainscreen'
         component={Mainscreen}
-        options={{title: "Home"}}
+        options={{ headerShown: false }}
       /> 
        <Stack.Screen
         name='Screen2'
         component={Screen2}
-        options={{title: "Uv värde"}}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   </NavigationContainer>

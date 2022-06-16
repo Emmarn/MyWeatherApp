@@ -5,8 +5,7 @@ import Cityweather from "../Components/Cityweather";
 
 
 const Mainscreen = ({navigation: {navigate}}) => {
-
-
+  
    return (
      <>
     <Cityweather />
