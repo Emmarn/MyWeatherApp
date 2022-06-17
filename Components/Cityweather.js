@@ -30,7 +30,7 @@ const Cityweather = () => {
     return (
       <View style={styles.root}>
         <ImageBackground
-          source={require('../assets/blomma.jpg')}
+          source={require('../assets/himmel.jpg')}
           resizeMode="cover"
           style={styles.image}>
           <View>
@@ -54,7 +54,7 @@ const Cityweather = () => {
               <Text
                 style={styles.cityCountryTexts}>
                 {`${data?.name}, ${data?.sys?.country}`}</Text>
-                <Text style={styles.dateText}>{new Date().toLocaleString()}</Text>
+                <Text style={styles.dateText}>{new Date().toLocaleDateString()}</Text>
               <Text style={styles.tempText}>{`${Math.round(
                 data?.main?.temp,
               )} °C`}</Text>
@@ -90,24 +90,24 @@ const Cityweather = () => {
      alignItems: 'center',
     },
     cityCountryTexts:{
-     color: "#fff",
+     color: "#21333D",
      fontSize: 40,
      fontWeight: 'bold',
     },
     dateText:{
-     color: "#fff",
+     color: "#21333D",
      fontSize: 22,
      marginVertical: 10,
     },
     tempText:{
      fontSize:45,
-     color: "#fff",
+     color: "#21333D",
      marginVertical: 10,
     },
   
      minmaxText: {
       fontSize: 22,
-      color: "#fff",
+      color: "#21333D",
       marginVertical: 10,
       fontWeight: '500',
      },

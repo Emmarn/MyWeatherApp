@@ -30,7 +30,7 @@ const Solarinfo = () => {
 return (
     <View style={styles.root}>
     <ImageBackground
-      source={require('../assets/himmel.jpg')}
+      source={require('../assets/pexelimg.jpg')}
       resizeMode="cover"
       style={styles.image}>
       <View>
@@ -85,18 +85,18 @@ const styles = StyleSheet.create({
      alignItems: 'center',
     },
     cityCountryText:{
-     color: "#fff",
+     color: "#21333D",
      fontSize: 40,
      fontWeight: 'bold',
     },
     dateText:{
-     color: "#fff",
+     color: "#21333D",
      fontSize: 22,
      marginVertical: 10,
     },
     tempText:{
      fontSize:45,
-     color: "#fff",
+     color: "#21333D",
      marginVertical: 10,
     },
   

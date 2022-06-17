@@ -12,7 +12,7 @@ const Mainscreen = ({navigation: {navigate}}) => {
     <Pressable 
     style={styles.pressbtn}
            onPress={() => navigate("Screen2")}>
-          <Text style={styles.textstyle}>Se UV värde</Text>
+          <Text style={styles.textstyle}>Se befolkningsantal</Text>
        </Pressable>
      </>
    )
