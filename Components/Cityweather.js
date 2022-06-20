@@ -54,7 +54,7 @@ const Cityweather = () => {
               <Text
                 style={styles.cityCountryTexts}>
                 {`${data?.name}, ${data?.sys?.country}`}</Text>
-                <Text style={styles.dateText}>{new Date().toLocaleDateString()}</Text>
+                <Text style={styles.dateText}>{new Date().toDateString()}</Text>
               <Text style={styles.tempText}>{`${Math.round(
                 data?.main?.temp,
               )} °C`}</Text>
