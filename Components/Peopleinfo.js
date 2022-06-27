@@ -29,7 +29,7 @@ const Peopleinfo = () => {
 return (
     <View style={styles.root}>
     <ImageBackground
-      source={require('../assets/road.jpg')}
+      source={require('../assets/lake.jpg')}
       resizeMode="cover"
       style={styles.image}>
       <View>

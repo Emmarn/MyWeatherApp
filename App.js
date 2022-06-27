@@ -12,6 +12,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { initDB } from "./Database/DbUtils";
 
 
+
 export default function App() {
 
    useEffect(() => {
@@ -39,7 +40,6 @@ export default function App() {
       />
     </Stack.Navigator>
   </NavigationContainer>
-
   )
   }
 
