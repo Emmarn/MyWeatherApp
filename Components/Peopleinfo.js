@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, {useState, useCallback }  from "react";
-import { Text, Pressable, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator } from 'react-native'
+import { Text, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator } from 'react-native'
 
 
-
-const Solarinfo = () => {
+const Peopleinfo = () => {
 
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
@@ -30,7 +29,7 @@ const Solarinfo = () => {
 return (
     <View style={styles.root}>
     <ImageBackground
-      source={require('../assets/pexelimg.jpg')}
+      source={require('../assets/road.jpg')}
       resizeMode="cover"
       style={styles.image}>
       <View>
@@ -55,7 +54,7 @@ return (
                 style={styles.cityCountryText}>
                 {`${data?.city?.name}, ${data?.city?.country}`}</Text>
                  <Text style={styles.tempText}>
-                 {`${data?.city?.population}`}
+                 {`Här bor ${data?.city?.population} personer`}
                 </Text>
             </View>
           )}
@@ -70,7 +69,7 @@ const styles = StyleSheet.create({
     },
     image: {
       flex: 1,
-      fledDirection: 'column',
+      flexDirection: 'column',
     },
     textInput: {
       padding: 5,
@@ -85,29 +84,16 @@ const styles = StyleSheet.create({
      alignItems: 'center',
     },
     cityCountryText:{
-     color: "#21333D",
+     color: "#FFF",
      fontSize: 40,
      fontWeight: 'bold',
     },
-    dateText:{
-     color: "#21333D",
-     fontSize: 22,
-     marginVertical: 10,
-    },
     tempText:{
-     fontSize:45,
-     color: "#21333D",
+     fontSize:30,
+     color: "#FFF",
      marginVertical: 10,
     },
-  
-     minmaxText: {
-      fontSize: 22,
-      color: "#fff",
-      marginVertical: 10,
-      fontWeight: '500'
-     }
-    
   });
 
 
-export default Solarinfo;
+export default Peopleinfo;

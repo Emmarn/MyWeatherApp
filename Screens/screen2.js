@@ -1,5 +1,5 @@
 import { Icon, Text, Pressable, StyleSheet} from "react-native";
-import SolarInfo from "../Components/SolarInfo";
+import Peopleinfo from "../Components/Peopleinfo";
 
 
 
@@ -10,7 +10,7 @@ const Screen2 = ({navigation:{goBack}}) => {
             <SolarInfo/>
             <Pressable
                 onPress={() => goBack()}
-                style={styles.uvscreen}>
+                style={styles.uvpeoplescreen}>
                 <Text style={styles.tbx}>  Tillbaka</Text>
                 </Pressable>
         </>
@@ -18,7 +18,7 @@ const Screen2 = ({navigation:{goBack}}) => {
 }
 
 const styles = StyleSheet.create({
-    uvscreen:{
+    peoplescreen:{
       alignItems: 'center',
       padding: 20,
       fontSize: 40,

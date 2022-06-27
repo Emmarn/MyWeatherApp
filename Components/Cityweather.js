@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useState, useCallback }  from "react";
-import { Text, FlatList, Pressable, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator, Button } from 'react-native'
+import { Text, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator} from 'react-native'
 
 
 const Cityweather = () => {
@@ -30,7 +30,7 @@ const Cityweather = () => {
     return (
       <View style={styles.root}>
         <ImageBackground
-          source={require('../assets/himmel.jpg')}
+          source={require('../assets/lilac.jpg')}
           resizeMode="cover"
           style={styles.image}>
           <View>
@@ -68,7 +68,6 @@ const Cityweather = () => {
     );
   };
 
-
  const styles = StyleSheet.create({
     root: {
       flex: 1,
@@ -90,33 +89,26 @@ const Cityweather = () => {
      alignItems: 'center',
     },
     cityCountryTexts:{
-     color: "#21333D",
+     color: "#FFF",
      fontSize: 40,
      fontWeight: 'bold',
     },
     dateText:{
-     color: "#21333D",
+     color: "#FFF",
      fontSize: 22,
      marginVertical: 10,
     },
     tempText:{
      fontSize:45,
-     color: "#21333D",
+     color: "#FFF",
      marginVertical: 10,
     },
-  
      minmaxText: {
       fontSize: 22,
-      color: "#21333D",
+      color: "#FFF",
       marginVertical: 10,
       fontWeight: '500',
-     },
-     pressbtn:{
-     color: "#fff",
-     fontSize: 22,
-     paddingLeft: 130,
      }
-    
   });
 
  export default Cityweather;
