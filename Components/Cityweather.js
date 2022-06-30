@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, {useState, useCallback }  from "react";
-import { Text, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator} from 'react-native'
+import { Text, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator} from 'react-native';
+import { historyS, insertHistory, insert, history } from "../Database/DbUtils" 
+
 
 
 const Cityweather = () => {
@@ -8,6 +10,16 @@ const Cityweather = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [data, setData ] = useState([]);
+  const historySearch = new historyS()
+  insert(historyS)
+      .then(res => {
+        console.log("insert res", res)
+        return insertHistory()
+      })
+      .then(res => console.log("något", res)) 
+      .catch(err => console.log(err));
+     
+  
 
   const api = {
     key: '1dea520f4b58f06bf0281207cc312c15',

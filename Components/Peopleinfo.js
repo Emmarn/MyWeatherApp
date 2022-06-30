@@ -3,12 +3,13 @@ import React, {useState, useCallback }  from "react";
 import { Text, StyleSheet, View, ImageBackground, TextInput, ActivityIndicator } from 'react-native'
 
 
+
 const Peopleinfo = () => {
 
     const [input, setInput] = useState("");
     const [loading, setLoading] = useState(false);
     const [data, setData ] = useState([]);
-  
+
     const api = {
       key: '1dea520f4b58f06bf0281207cc312c15',
       baseUrl: 'http://api.openweathermap.org/data/2.5/',

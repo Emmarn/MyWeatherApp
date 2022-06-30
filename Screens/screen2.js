@@ -11,7 +11,7 @@ const Screen2 = ({navigation:{goBack}}) => {
             <Pressable
                 onPress={() => goBack()}
                 style={styles.uvpeoplescreen}>
-                <Text style={styles.tbx}>  Tillbaka</Text>
+                <Text style={styles.tbx}> Tillbaka</Text>
                 </Pressable>
         </>
     )
