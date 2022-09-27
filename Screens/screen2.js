@@ -1,21 +1,34 @@
-import { View, ImageBackground, StatusBar, Text, TextInput, StyleSheet, Dimensions } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { withNavigation } from 'react-navigation';
+import { Icon, Text, Pressable, StyleSheet} from "react-native";
+import Peopleinfo from "../Components/Peopleinfo";
 
 
 
-const Screen2 = () => {
+const Screen2 = ({navigation:{goBack}}) => {
 
     return (
-        <View style={styles.screen2}>
-            <ImageBackground
-                source={require('../assets/blomma.jpg')}
-                reziseMode='cover'
-                style={styles.imgback2}/>
-        </View>
+        <>
+            <SolarInfo/>
+            <Pressable
+                onPress={() => goBack()}
+                style={styles.uvpeoplescreen}>
+                <Text style={styles.tbx}> Tillbaka</Text>
+                </Pressable>
+        </>
     )
-
 }
+
+const styles = StyleSheet.create({
+    peoplescreen:{
+      alignItems: 'center',
+      padding: 20,
+      fontSize: 40,
+      backgroundColor: '#000',
+    },
+    tbx: {
+      fontSize: 30,
+      color: "#fff"
+    }
+  });
+
 
 export default Screen2;
