@@ -10,13 +10,13 @@ import DbUtils from './Database/DbUtils';
 
 export default function App() {
   useEffect(() => {
-    DbUtils.clearTable()
-      .then(() => {
-        console.log('Table "history" cleared successfully');
-        return DbUtils.initDB();
-      })
+    DbUtils.initDB()
       .then(() => {
         console.log('Database initialized successfully');
+        return DbUtils.clearTable();
+      })
+      .then(() => {
+        console.log('Table "history" cleared successfully');
         return DbUtils.historyS();
       })
       .then(res => console.log("pragma table res", res))
